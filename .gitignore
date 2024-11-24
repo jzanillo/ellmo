@@ -1,0 +1,13 @@
+# General
+__pycache__/
+*.py[cod]
+.env
+.venv
+env/
+venv/
+
+poetry.toml
+.ruff_cache/
+
+.DS_Store
+*.icloud

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "ellmo"
+version = "0.1.0"
+description = ""
+authors = ["jzanillo <me@jonzanillo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+fastapi = "^0.115.5"
+trafilatura = "^1.12.2"
+duckduckgo-search = "^6.3.6"
+openai = "^1.55.0"
+uvicorn = "^0.32.1"
+tiktoken = "^0.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.0"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
