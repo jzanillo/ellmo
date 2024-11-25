@@ -12,7 +12,11 @@ open_api_key = os.getenv("OPENAI_API_KEY")
 if open_api_key is None:
     raise ValueError("OPENAI_API_KEY environment variable must be set")
 
-prompt_executor = PromptExecutor(open_api_key=open_api_key, max_results=3)
+max_search_results = int(os.getenv("MAX_SEARCH_RESULTS", 3))
+
+prompt_executor = PromptExecutor(
+    open_api_key=open_api_key, max_results=max_search_results
+)
 app = FastAPI(title="EllmO Chat API")
 
 
