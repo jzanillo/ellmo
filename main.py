@@ -8,14 +8,14 @@ from ellmo.internal.models import ChatCompletionRequest, ChatCompletionResponse
 
 load_dotenv()
 
-open_api_key = os.getenv("OPENAI_API_KEY")
-if open_api_key is None:
+OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
+if OPEN_API_KEY is None:
     raise ValueError("OPENAI_API_KEY environment variable must be set")
 
-max_search_results = int(os.getenv("MAX_SEARCH_RESULTS", 3))
+MAX_SEARCH_RESULTS = int(os.getenv("MAX_SEARCH_RESULTS", 3))
 
 prompt_executor = PromptExecutor(
-    open_api_key=open_api_key, max_results=max_search_results
+    open_api_key=OPEN_API_KEY, max_results=MAX_SEARCH_RESULTS
 )
 app = FastAPI(title="EllmO Chat API")
 
